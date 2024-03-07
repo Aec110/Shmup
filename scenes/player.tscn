@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://pe56yjjy5o60"]
+
+[ext_resource type="Texture2D" uid="uid://bji1xh5r5l032" path="res://assets/spritesheets/ship.png" id="1_0p886"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_y8mwj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lyhmf"]
+atlas = ExtResource("1_0p886")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k7c8w"]
+size = Vector2(34, 53)
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+motion_mode = 1
+script = ExtResource("1_y8mwj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2.2, 2.2)
+texture = SubResource("AtlasTexture_lyhmf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_k7c8w")
