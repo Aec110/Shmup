@@ -7,6 +7,7 @@
 script = ExtResource("1_pa7jr")
 
 [node name="Player" parent="." instance=ExtResource("2_rtnuc")]
+texture_filter = 1
 position = Vector2(265, 894)
 scale = Vector2(1, 1.04645)
 
