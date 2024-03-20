@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3qv23442k1xg"]
+
+[ext_resource type="Texture2D" uid="uid://oo0mydvabhmt" path="res://assets/enemyGreen1.png" id="1_45b72"]
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_062e2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_brxuw"]
+radius = 46.0109
+
+[sub_resource type="GDScript" id="GDScript_5gaa5"]
+script/source = "extends CollisionShape2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[node name="Enemy" type="Area2D"]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_062e2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_45b72")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_brxuw")
+script = SubResource("GDScript_5gaa5")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(0, -65)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
