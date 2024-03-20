@@ -2,7 +2,7 @@ class_name Player extends CharacterBody2D
 
 signal laser_shot(laser_scene, location)
 
-@export var speed = 300
+@export var speed = 350
 @export var rate_of_fire := 0.15
 @onready var muzzle = $Muzzle
 

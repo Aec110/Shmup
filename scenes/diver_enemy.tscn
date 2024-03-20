@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://doeowvjvoscvh"]
+
+[ext_resource type="PackedScene" uid="uid://c3qv23442k1xg" path="res://scenes/enemy.tscn" id="1_reksl"]
+[ext_resource type="Texture2D" uid="uid://o3as0notc4wt" path="res://assets/enemyBlue5.png" id="2_5humv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0f7fk"]
+radius = 22.0
+
+[node name="DiverEnemy" instance=ExtResource("1_reksl")]
+speed = 400
+hp = 1
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_5humv")
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("CircleShape2D_0f7fk")
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="2"]
+position = Vector2(0, -50)

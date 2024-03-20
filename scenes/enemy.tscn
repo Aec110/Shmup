@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scripts/enemy.gd" id="1_062e2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_brxuw"]
-radius = 46.0109
+radius = 50.2494
 
 [sub_resource type="GDScript" id="GDScript_5gaa5"]
 script/source = "extends CollisionShape2D
@@ -24,6 +24,7 @@ func _process(delta):
 collision_layer = 2
 collision_mask = 5
 script = ExtResource("1_062e2")
+hp = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
