@@ -1,15 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://q08hn5wvbumo"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_pa7jr"]
-[ext_resource type="PackedScene" uid="uid://pe56yjjy5o60" path="res://scenes/player.tscn" id="2_rtnuc"]
+[ext_resource type="PackedScene" uid="uid://pe56yjjy5o60" path="res://scenes/Player.tscn" id="3_5cy2t"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_pa7jr")
 
-[node name="Player" parent="." instance=ExtResource("2_rtnuc")]
-texture_filter = 1
-position = Vector2(265, 894)
-scale = Vector2(1, 1.04645)
+[node name="Player" parent="." instance=ExtResource("3_5cy2t")]
+position = Vector2(380, 687)
+scale = Vector2(0.7, 0.7)
 
 [node name="PlayerSpawnPos" type="Marker2D" parent="."]
-position = Vector2(270, 850)
+position = Vector2(265.035, 867)

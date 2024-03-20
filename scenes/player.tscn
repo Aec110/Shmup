@@ -1,23 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://pe56yjjy5o60"]
+[gd_scene load_steps=3 format=3 uid="uid://pe56yjjy5o60"]
 
-[ext_resource type="Texture2D" uid="uid://bji1xh5r5l032" path="res://assets/spritesheets/ship.png" id="1_0p886"]
-[ext_resource type="Script" path="res://scripts/player.gd" id="1_y8mwj"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lyhmf"]
-atlas = ExtResource("1_0p886")
-region = Rect2(32, 0, 16, 24)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_k7c8w"]
-size = Vector2(34, 53)
+[ext_resource type="Script" path="res://scripts/Player.gd" id="1_ivjot"]
+[ext_resource type="Texture2D" uid="uid://cmlvwnslx2nq8" path="res://assets/playerShip2_red.png" id="2_pvdfo"]
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 motion_mode = 1
-script = ExtResource("1_y8mwj")
+script = ExtResource("1_ivjot")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(2.2, 2.2)
-texture = SubResource("AtlasTexture_lyhmf")
+texture_filter = 1
+texture = ExtResource("2_pvdfo")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -0.5)
-shape = SubResource("RectangleShape2D_k7c8w")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-56, 5, -47, 25, -37, 35, -29, 33, -18, 30, -13, 38, 13, 38, 17, 31, 36, 35, 40, 32, 45, 25, 56, 6, 54, 3, 46, 0, 43, 0, 30, -7, 16, -15, 11, -19, 4, -38, -4, -38, -12, -18, -31, -7, -45, 1, -47, 0)
