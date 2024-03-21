@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2jlqgvsqhgh3"]
+
+[ext_resource type="Script" path="res://scripts/shooter_enemy.gd" id="1_hnpjd"]
+[ext_resource type="Texture2D" uid="uid://br2w2dajrbem1" path="res://assets/playerShip1_blue.png" id="1_v4k3q"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_886dk"]
+radius = 43.0813
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lcjob"]
+radius = 15.39
+
+[node name="ShooterEnemy" type="CharacterBody2D"]
+script = ExtResource("1_hnpjd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+top_level = true
+shape = SubResource("CircleShape2D_886dk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -3.14159
+texture = ExtResource("1_v4k3q")
+
+[node name="Detection" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detection"]
+scale = Vector2(25, 25)
+shape = SubResource("CircleShape2D_lcjob")
+
+[node name="Spawnlaser" type="Marker2D" parent="."]
+position = Vector2(0, 56)
+
+[node name="Shootspeed" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
+[connection signal="body_entered" from="Detection" to="." method="_on_detection_body_entered"]
+[connection signal="timeout" from="Shootspeed" to="." method="_on_shootspeed_timeout"]
