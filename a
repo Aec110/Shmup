@@ -1,0 +1,41 @@
+[33mcommit 79ac7705c054add0c70574f43df5f9148f8ff715[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Joaquin Hermosisima <007heinekenlover@gmail.com>
+Date:   Wed Mar 20 16:55:44 2024 +0800
+
+    Installed Galaxy
+
+[33mcommit 35bdde502b98b0f97152a38b80f197b273e9e172[m
+Author: Joaquin Hermosisima <007heinekenlover@gmail.com>
+Date:   Wed Mar 20 15:51:05 2024 +0800
+
+    Implemented Enemy Spawning System
+
+[33mcommit 57fc8b39f31a091e2cdd24197a07005566dcaddf[m
+Author: Joaquin Hermosisima <007heinekenlover@gmail.com>
+Date:   Wed Mar 20 15:04:39 2024 +0800
+
+    Created Enemy
+
+[33mcommit f343ec015ba4427d6e6cd10995dd2135db7d7bae[m
+Author: Joaquin Hermosisima <007heinekenlover@gmail.com>
+Date:   Wed Mar 20 14:32:33 2024 +0800
+
+    Implemented Lasers
+
+[33mcommit 0702f745331bdfd8906b2f5756999c3487b0e74e[m
+Author: Joaquin Hermosisima <007heinekenlover@gmail.com>
+Date:   Wed Mar 20 13:42:50 2024 +0800
+
+    Revamped Player
+
+[33mcommit 9212dd87f39f0881b5c9e867ad63b3ce63f783fc[m
+Author: Joaquin Hermosisima <joaquin.hermosisima@obf.ateneo.edu>
+Date:   Sun Mar 17 15:23:52 2024 +0800
+
+    Edited texturing
+
+[33mcommit 040453b9ec6a749cbcd9744adbb92b32775d2e8b[m
+Author: Andrew Idquival <andrew.idquival@obf.ateneo.edu>
+Date:   Thu Mar 7 10:27:56 2024 +0800
+
+    Initial commit

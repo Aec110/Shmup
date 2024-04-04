@@ -1,7 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://q08hn5wvbumo"]
+[gd_scene load_steps=11 format=3 uid="uid://q08hn5wvbumo"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_pa7jr"]
-[ext_resource type="PackedScene" uid="uid://pe56yjjy5o60" path="res://scenes/player.tscn" id="3_5cy2t"]
+[ext_resource type="PackedScene" uid="uid://pe56yjjy5o60" path="res://scenes/Player.tscn" id="3_5cy2t"]
 [ext_resource type="PackedScene" uid="uid://c3qv23442k1xg" path="res://scenes/enemy.tscn" id="3_hao7i"]
 [ext_resource type="PackedScene" uid="uid://doeowvjvoscvh" path="res://scenes/diver_enemy.tscn" id="4_bm3dl"]
 [ext_resource type="Texture2D" uid="uid://bmixpwiipxeib" path="res://assets/purple.png" id="5_lag4p"]
@@ -9,7 +9,6 @@
 [ext_resource type="AudioStream" uid="uid://b14bjo1ntrim3" path="res://assets/audio/sfx_laser2.ogg" id="7_crhbn"]
 [ext_resource type="AudioStream" uid="uid://b6atlswxpo68" path="res://assets/audio/sfx_zap.ogg" id="8_owxek"]
 [ext_resource type="AudioStream" uid="uid://dnsdeyuc41lmn" path="res://assets/audio/sfx_lose.ogg" id="9_vf1my"]
-[ext_resource type="PackedScene" uid="uid://b2jlqgvsqhgh3" path="res://scenes/shooter_enemy.tscn" id="10_4qda2"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_allid"]
 particle_flag_disable_z = true
@@ -71,8 +70,5 @@ stream = ExtResource("8_owxek")
 
 [node name="ExplodeSound" type="AudioStreamPlayer2D" parent="SFX"]
 stream = ExtResource("9_vf1my")
-
-[node name="ShooterEnemy" parent="." instance=ExtResource("10_4qda2")]
-position = Vector2(281, -71)
 
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_enemy_spawn_timer_timeout"]
